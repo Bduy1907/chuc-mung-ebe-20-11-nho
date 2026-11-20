@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chúc Mừng 20/11 Cô Giáo Tương Lai</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #ffe6eb 0%, #fff5f7 50%, #fce4ec 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow-x: hidden;
+      padding: 20px;
+      position: relative;
+    }
+
+    .petal {
+      position: fixed;
+      top: -10%;
+      color: #ff4d6d;
+      user-select: none;
+      pointer-events: none;
+      animation: fall linear infinite;
+      z-index: 1;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0.2;
+      }
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(10px);
+      max-width: 540px;
+      width: 100%;
+      border-radius: 24px;
+      padding: 38px 28px;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(216, 27, 96, 0.15);
+      border: 2px solid #ffc2d1;
+      position: relative;
+      z-index: 10;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #ffccd5;
+      color: #c9184a;
+      font-weight: 700;
+      font-size: 13px;
+      padding: 6px 16px;
+      border-radius: 50px;
+      margin-bottom: 16px;
+      letter-spacing: 0.4px;
+    }
+
+    h1 {
+      color: #a4133c;
+      font-size: 26px;
+      line-height: 1.35;
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      color: #590d22;
+      font-size: 15.5px;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .btn {
+      background: linear-gradient(45deg, #ff4d6d, #c9184a);
+      color: #fff;
+      border: none;
+      padding: 14px 28px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(201, 24, 74, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 25px rgba(201, 24, 74, 0.4);
+    }
+
+    .secret-letter {
+      display: none;
+      margin-top: 24px;
+      padding: 22px;
+      background: #fff0f3;
+      border-radius: 16px;
+      border-left: 4px solid #ff4d6d;
+      text-align: left;
+      animation: fadeIn 0.7s ease forwards;
+    }
+
+    .secret-letter p {
+      color: #4a0e1c;
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    .signature {
+      text-align: right;
+      font-weight: 700;
+      color: #c9184a;
+      font-style: italic;
+      margin-top: 8px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="badge">🎓 CHÚC MỪNG 20/11 CÔ GIÁO TƯƠNG LAI 🌸</div>
+    <h1>Gửi Cô Sinh Viên Sư Phạm Xinh Đẹp Của Anh!</h1>
+    <p class="subtitle">
+      Dù chưa chính thức tốt nghiệp, nhưng trong mắt anh, em đã là cô giáo tận tâm và đáng yêu nhất rồi.
+    </p>
+
+    <button class="btn" id="openBtn" onclick="openLetter()">💌 Mở Lời Chúc 20/11</button>
+
+    <div class="secret-letter" id="letterBox">
+      <p><strong>Gửi công chúa nhỏ xinh đẹp của anh,</strong></p>
+      <p>
+        Chúc mừng ngày 20/11 đặc biệt của "cô giáo tập sự" nhà anh! Những ngày tháng miệt mài soạn giáo án, chạy deadline trên giảng đường hay hồi hộp đứng lớp kiến tập, thực tập đều là bước đệm tuyệt vời để em chạm tới ước mơ.
+      </p>
+      <p>
+        Chúc em học thật tốt, ra trường thuận lợi với tấm bằng thật đẹp và luôn giữ mãi ngọn lửa yêu nghề. Dù sau này em có là cô giáo của bao nhiêu thế hệ học trò đi nữa, thì ở đây vẫn luôn có anh ủng hộ và thương em nhất! ❤️
+      </p>
+      <div class="signature">— Học trò đặc biệt của riêng em 💕</div>
+    </div>
+  </div>
+
+  <script>
+    function openLetter() {
+      const letter = document.getElementById('letterBox');
+      const btn = document.getElementById('openBtn');
+      letter.style.display = 'block';
+      btn.innerText = '🎓 Chúc ebe của anhhh Sớm Ra Trường & Thành Công ❤️';
+      btn.style.background = '#ff758f';
+    }
+
+    const symbols = ['🌸', '❤️', '🎓', '📚', '✨', '🌷'];
+    function createPetal() {
+      const petal = document.createElement('div');
+      petal.classList.add('petal');
+      petal.innerText = symbols[Math.floor(Math.random() * symbols.length)];
+      petal.style.left = Math.random() * 100 + 'vw';
+      petal.style.animationDuration = (Math.random() * 3 + 4) + 's';
+      petal.style.fontSize = (Math.random() * 14 + 14) + 'px';
+      document.body.appendChild(petal);
+
+      setTimeout(() => {
+        petal.remove();
+      }, 7000);
+    }
+
+    setInterval(createPetal, 350);
+  </script>
+
+</body>
+</html>
